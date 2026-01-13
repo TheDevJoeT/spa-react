@@ -22,18 +22,20 @@ function App() {
       id: 3,
       title: "Third Post",
     },
-    {
-      id: 4,
-      title: "Fourth Post",
-    },
+    
   ]);
+
+  let addPost = (post) => {
+   setPosts((prevState => [... prevState, post]))
+   setShowModal(false)
+  }
 
   return (
     <>
       <Navbar setShowModal = {setShowModal}/>
       <PostList posts={posts} />
       { showModal && <Modal setShowModal = {setShowModal} >
-        <PostForm />
+        <PostForm addPost={addPost} />
       </Modal>}
     </>
   );
