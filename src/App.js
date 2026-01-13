@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css"; // this css only implies app.js which is a component
 import Navbar from "./components/Navbar/index";
 import PostList from "./components/PostList/index";
+import PostForm from "./components/PostForm/index";
 import Modal from "./components/Modal/index";
 
 function App() {
@@ -31,12 +32,8 @@ function App() {
     <>
       <Navbar setShowModal = {setShowModal}/>
       <PostList posts={posts} />
-      { showModal && <Modal >
-        <h1>Zoom class is Available</h1>
-        <p>
-          Join <a href="">Here!</a>
-        </p>
-        <button onClick={()=>setShowModal(false)}>Close</button>
+      { showModal && <Modal setShowModal = {setShowModal} >
+        <PostForm />
       </Modal>}
     </>
   );

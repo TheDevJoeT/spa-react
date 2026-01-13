@@ -1,0 +1,23 @@
+.post-form .form-control {
+    margin: 10px;
+}
+
+.form-control label {
+    margin-right: 10px;
+}
+
+.form-control input {
+    width: 80%;
+    border: 2px solid green;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.post-form button {
+    border: 2px solid black;
+    background-color: lightblue;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+}
